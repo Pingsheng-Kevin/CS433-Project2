@@ -1,0 +1,4 @@
+data/*
+sample-model-submission/*
+__pycache__/*
+*.pt
