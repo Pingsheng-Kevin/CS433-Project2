@@ -93,7 +93,7 @@ para_comb = list(itertools.product(seed_list, divisor))
 num_filters = (filter_list / d).astype(int)  # [32, 32, 64, 128, 256]  filter numbers for each layer
 set_seed(seed)
 
-simclr_transform = SimCLRTransform(5) # cifar 
+simclr_transform = SimCLRTransform(32) # cifar 
 train_dataset = CIFAR100SimCLR(train=True, transform=simclr_transform)
 val_dataset =  CIFAR100SimCLR(train=False, transform=simclr_transform)
 train_loader = DataLoader(train_dataset, batch_size=4096, shuffle=True, num_workers=0)
